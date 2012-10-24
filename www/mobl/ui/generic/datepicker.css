@@ -1,0 +1,25 @@
+.mobl__ui__generic__datepicker__narrowNumFieldStyle {
+  -webkit-appearance: none;
+  -webkit-box-flex: 100;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  -webkit-text-size-adjust: 140%;
+  -moz-text-size-adjust: 140%;
+  -webkit-appearance: textarea;
+  background: transparent;
+  border: 0;
+  font-size: 17px;
+  height: 17px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 3em;
+}
+.mobl__ui__generic__datepicker__monthStyle {
+  font-size: 17px;
+  height: 17px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 3em;
+}

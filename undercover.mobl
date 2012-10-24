@@ -1,0 +1,181 @@
+application undercover 
+import mobl::ui::generic::datepicker
+import mobl::reflect 
+ 
+import mobl
+ 
+import mobl::ui::stylemixin
+import ui
+
+type Unit {
+  id   : Num
+  text  : String
+  isUnderCover: Bool
+}
+screen root() {
+	header("谁是卧底")
+	var gameNum:Num= 7
+	
+	var undercoverNum = 2
+	item{ 
+ 	label("游戏人数：")
+	numField(gameNum,  placeholder="游戏人数", validator=num_validate) 
+  }
+	item{
+	label("卧底人数：")
+	numField(undercoverNum,  placeholder="卧底人数",validator=uc_num_validate)  
+	}
+	item{sideButton("确定",onclick={infoScreen(gameNum,undercoverNum);})}
+ 
+// 	var units = getUnitList(7,2)
+// 	var i:Num = 1
+// 	 
+// 	 
+//  
+//     group { 
+// 		 
+//       list(unit in units) { 
+// 		 
+//       	item{
+// 
+// 			label(unit.id)
+// 			 
+// 			sideButton("显示",onclick={alert(unit.text);})
+// 			sideButton("身份",onclick={alert(isUnderCover(unit.isUnderCover));})
+//  
+//       }
+//     }
+//   } 
+}
+
+screen infoScreen(gameNum:Num, undercoverNum:Num) {
+	var game_status = "准备中"
+	var game_status_desc = "查看自己的词语,每个只能显示一次！！！"
+	header("谁是卧底：")
+	 
+	item{label("目前游戏状态:	"+game_status)<br/>label("说明:	"+game_status_desc)
+
+		}
+	 
+	item{ 
+ 	label("游戏人数："+gameNum.toString()+" ")
+	
+	label("卧底人数："+undercoverNum.toString())
+	  
+	}
+	 
+	
+	var units = getUnitList(gameNum,undercoverNum)
+	var i:Num = 1
+	 
+	 
+  
+    group { 
+		 var string1:String = "身份,不可点" 
+		var isStart:Bool = false 
+      list(unit in units) { 
+      	item{
+			var ss:String="未知"
+			var isShow:Bool = false
+			var show:String = "显示" 
+			 
+			//textField(ss,label=unit.id.toString())  
+			label(unit.id)
+			label(" : ")
+			label(ss)
+			sideButton(show,onclick={
+					if(!isShow){
+					alert(unit.text);
+					show = "已显示";	
+					isShow = true;
+					}
+			})
+			sideButton( string1,onclick={
+				if(isStart){
+					alert(isUnderCover(unit.isUnderCover));
+					ss = isUnderCover(unit.isUnderCover);	
+				}						
+				})
+			
+ 
+      }
+		
+    }
+	 
+	item{	
+			 var btnString:String= "开始游戏"
+			var labelString:String = "点击开始游戏后，才能显示身份！"
+			label(labelString )
+			sideButton( btnString,onclick={
+				string1 = "身份"	;
+				isStart = true;
+				game_status = "游戏进行中";
+				game_status_desc ="点击身份查看出局者身份";
+				btnString = "游戏中";
+				labelString = "游戏开始了";
+									
+				})}
+  } 
+
+}
+
+function isUnderCover(isUc:Bool):String{
+	if(isUc)return "卧底";
+	else return "不是卧底";
+}
+
+function getalist(gameNum:Num,list:Array<Num>):Array<Num>{
+	var ids:Array<Num> = [];
+	foreach (n in range(1,gameNum+1)){
+		if(!list.contains(n)){
+			ids.push(n);
+		}
+	}
+	return ids;
+}
+
+function getUnitList(gameNum:Num,ucNum:Num ):Array<Unit>{
+	var   rs :Array<Unit> = [];
+	var texts = ["中秋","端午"];
+	var normal_text = texts.get(0);
+	var uc_text = texts.get(1);
+	var uc_ids:Array<Num> = [];
+ 
+	foreach (n in range(0,ucNum)){
+		var ids:Array<Num> = getalist(gameNum,uc_ids);
+		var rnum = random(ids.length-1);
+		var unum = ids.get(rnum);
+		uc_ids.push(unum);
+		 
+		 
+		
+	}
+	log(uc_ids);
+
+	foreach(n in range(1,gameNum+1)){
+		var item:Unit= [];
+		 
+		item.id = n;
+		if(uc_ids.contains(n)){
+			item.text = uc_text;
+			item.isUnderCover = true;
+		}else{
+			item.text = normal_text;
+			item.isUnderCover = false;
+		}
+		 
+		rs.push(item);
+	}
+	return rs;
+}
+
+function num_validate(n : Num) : String {
+	
+	if( n >0)return "";
+	else return "请输入数字，不能为0";
+}
+
+function uc_num_validate(n : Num) : String {
+	if( n >1)return "";
+	else return "请输入数字，卧底大于等于1人";
+}
