@@ -17,6 +17,8 @@ screen root() {
 	var gameNum:Num= 7
 	
 	var undercoverNum = 2
+	var normalString:String =""
+	var ucString:String =""
 	item{ 
  	label("游戏人数：")
 	numField(gameNum,  placeholder="游戏人数", validator=num_validate) 
@@ -25,7 +27,16 @@ screen root() {
 	label("卧底人数：")
 	numField(undercoverNum,  placeholder="卧底人数",validator=uc_num_validate)  
 	}
-	item{sideButton("确定",onclick={infoScreen(gameNum,undercoverNum);})}
+	item{
+	label("普通词：")
+	textField(normalString,  placeholder="普通词")  
+	}
+	item{
+	label("卧底词：")
+	textField(ucString,  placeholder="卧底词")  
+	}
+	
+	item{sideButton("确定",onclick={infoScreen(gameNum,undercoverNum,normalString,ucString);})}
  
 // 	var units = getUnitList(7,2)
 // 	var i:Num = 1
@@ -48,7 +59,7 @@ screen root() {
 //   } 
 }
 
-screen infoScreen(gameNum:Num, undercoverNum:Num) {
+screen infoScreen(gameNum:Num, undercoverNum:Num,normalString:String,ucString:String) {
 	var game_status = "准备中"
 	var game_status_desc = "查看自己的词语,每个只能显示一次！！！"
 	header("谁是卧底：")
@@ -65,7 +76,7 @@ screen infoScreen(gameNum:Num, undercoverNum:Num) {
 	}
 	 
 	
-	var units = getUnitList(gameNum,undercoverNum)
+	var units = getUnitList(gameNum,undercoverNum, normalString,ucString)
 	var i:Num = 1
 	 
 	 
@@ -134,11 +145,11 @@ function getalist(gameNum:Num,list:Array<Num>):Array<Num>{
 	return ids;
 }
 
-function getUnitList(gameNum:Num,ucNum:Num ):Array<Unit>{
+function getUnitList(gameNum:Num,ucNum:Num ,normalString:String,ucString:String):Array<Unit>{
 	var   rs :Array<Unit> = [];
-	var texts = ["中秋","端午"];
-	var normal_text = texts.get(0);
-	var uc_text = texts.get(1);
+	// var texts = ["中秋","端午"];
+	// var normal_text = texts.get(0);
+	// var uc_text = texts.get(1);
 	var uc_ids:Array<Num> = [];
  
 	foreach (n in range(0,ucNum)){
@@ -157,10 +168,10 @@ function getUnitList(gameNum:Num,ucNum:Num ):Array<Unit>{
 		 
 		item.id = n;
 		if(uc_ids.contains(n)){
-			item.text = uc_text;
+			item.text = ucString;
 			item.isUnderCover = true;
 		}else{
-			item.text = normal_text;
+			item.text = normalString;
 			item.isUnderCover = false;
 		}
 		 
@@ -172,7 +183,7 @@ function getUnitList(gameNum:Num,ucNum:Num ):Array<Unit>{
 function num_validate(n : Num) : String {
 	
 	if( n >0)return "";
-	else return "请输入数字，不能为0";
+	else return "请输入数字，不能为0!";
 }
 
 function uc_num_validate(n : Num) : String {

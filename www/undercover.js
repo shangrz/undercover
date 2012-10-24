@@ -8,135 +8,217 @@ persistence.debug = false;undercover.Unit = mobl.defineType('undercover.Unit', n
 
 
 undercover.root = function(callback, screenCallback) {
-  var root3180 = $("<div>");
+  var root3276 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes2817 = $("<span>");
-  root3180.append(nodes2817);
+  var nodes2907 = $("<span>");
+  root3276.append(nodes2907);
   subs__.addSub((ui.header)(mobl.ref("谁是卧底"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root3181 = $("<span>");
+    var root3277 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root3181); return subs__;
+    callback(root3277); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2817;
-    nodes2817 = node.contents();
-    oldNodes.replaceWith(nodes2817);
+    var oldNodes = nodes2907;
+    nodes2907 = node.contents();
+    oldNodes.replaceWith(nodes2907);
   }));
   
   var gameNum = mobl.ref(7);
   
   var undercoverNum = mobl.ref(2);
-  var nodes2818 = $("<span>");
-  root3180.append(nodes2818);
+  
+  var normalString = mobl.ref("");
+  
+  var ucString = mobl.ref("");
+  var nodes2908 = $("<span>");
+  root3276.append(nodes2908);
   subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-    var root3182 = $("<span>");
+    var root3278 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    var nodes2819 = $("<span>");
-    root3182.append(nodes2819);
+    var nodes2909 = $("<span>");
+    root3278.append(nodes2909);
     subs__.addSub((mobl.label)(mobl.ref("游戏人数："), mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3183 = $("<span>");
+      var root3279 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3183); return subs__;
+      callback(root3279); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2819;
-      nodes2819 = node.contents();
-      oldNodes.replaceWith(nodes2819);
+      var oldNodes = nodes2909;
+      nodes2909 = node.contents();
+      oldNodes.replaceWith(nodes2909);
     }));
-    var nodes2820 = $("<span>");
-    root3182.append(nodes2820);
+    var nodes2910 = $("<span>");
+    root3278.append(nodes2910);
     subs__.addSub((ui.numField)(gameNum, mobl.ref(null), mobl.ref("游戏人数"), mobl.ref(undercover.num_validate), mobl.ref(ui.textFieldStyle), mobl.ref(ui.textFieldInvalidStyle), mobl.ref(false), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3184 = $("<span>");
+      var root3280 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3184); return subs__;
+      callback(root3280); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2820;
-      nodes2820 = node.contents();
-      oldNodes.replaceWith(nodes2820);
+      var oldNodes = nodes2910;
+      nodes2910 = node.contents();
+      oldNodes.replaceWith(nodes2910);
     }));
-    callback(root3182); return subs__;
+    callback(root3278); return subs__;
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2818;
-    nodes2818 = node.contents();
-    oldNodes.replaceWith(nodes2818);
+    var oldNodes = nodes2908;
+    nodes2908 = node.contents();
+    oldNodes.replaceWith(nodes2908);
   }));
-  var nodes2821 = $("<span>");
-  root3180.append(nodes2821);
+  var nodes2911 = $("<span>");
+  root3276.append(nodes2911);
   subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-    var root3185 = $("<span>");
+    var root3281 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    var nodes2822 = $("<span>");
-    root3185.append(nodes2822);
+    var nodes2912 = $("<span>");
+    root3281.append(nodes2912);
     subs__.addSub((mobl.label)(mobl.ref("卧底人数："), mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3186 = $("<span>");
+      var root3282 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3186); return subs__;
+      callback(root3282); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2822;
-      nodes2822 = node.contents();
-      oldNodes.replaceWith(nodes2822);
+      var oldNodes = nodes2912;
+      nodes2912 = node.contents();
+      oldNodes.replaceWith(nodes2912);
     }));
-    var nodes2823 = $("<span>");
-    root3185.append(nodes2823);
+    var nodes2913 = $("<span>");
+    root3281.append(nodes2913);
     subs__.addSub((ui.numField)(undercoverNum, mobl.ref(null), mobl.ref("卧底人数"), mobl.ref(undercover.uc_num_validate), mobl.ref(ui.textFieldStyle), mobl.ref(ui.textFieldInvalidStyle), mobl.ref(false), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3187 = $("<span>");
+      var root3283 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3187); return subs__;
+      callback(root3283); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2823;
-      nodes2823 = node.contents();
-      oldNodes.replaceWith(nodes2823);
+      var oldNodes = nodes2913;
+      nodes2913 = node.contents();
+      oldNodes.replaceWith(nodes2913);
     }));
-    callback(root3185); return subs__;
+    callback(root3281); return subs__;
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2821;
-    nodes2821 = node.contents();
-    oldNodes.replaceWith(nodes2821);
+    var oldNodes = nodes2911;
+    nodes2911 = node.contents();
+    oldNodes.replaceWith(nodes2911);
   }));
-  var nodes2824 = $("<span>");
-  root3180.append(nodes2824);
+  var nodes2914 = $("<span>");
+  root3276.append(nodes2914);
   subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-    var root3188 = $("<span>");
+    var root3284 = $("<span>");
+    var subs__ = new mobl.CompSubscription();
+    var nodes2915 = $("<span>");
+    root3284.append(nodes2915);
+    subs__.addSub((mobl.label)(mobl.ref("普通词："), mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3285 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root3285); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes2915;
+      nodes2915 = node.contents();
+      oldNodes.replaceWith(nodes2915);
+    }));
+    var nodes2916 = $("<span>");
+    root3284.append(nodes2916);
+    subs__.addSub((ui.textField)(normalString, mobl.ref("普通词"), mobl.ref(null), mobl.ref("text"), mobl.ref(null), mobl.ref(ui.textFieldStyle), mobl.ref(ui.textFieldInvalidStyle), mobl.ref(false), mobl.ref(true), mobl.ref(true), mobl.ref(true), mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3286 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root3286); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes2916;
+      nodes2916 = node.contents();
+      oldNodes.replaceWith(nodes2916);
+    }));
+    callback(root3284); return subs__;
+    
+    
+    return subs__;
+  }, function(node) {
+    var oldNodes = nodes2914;
+    nodes2914 = node.contents();
+    oldNodes.replaceWith(nodes2914);
+  }));
+  var nodes2917 = $("<span>");
+  root3276.append(nodes2917);
+  subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
+    var root3287 = $("<span>");
+    var subs__ = new mobl.CompSubscription();
+    var nodes2918 = $("<span>");
+    root3287.append(nodes2918);
+    subs__.addSub((mobl.label)(mobl.ref("卧底词："), mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3288 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root3288); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes2918;
+      nodes2918 = node.contents();
+      oldNodes.replaceWith(nodes2918);
+    }));
+    var nodes2919 = $("<span>");
+    root3287.append(nodes2919);
+    subs__.addSub((ui.textField)(ucString, mobl.ref("卧底词"), mobl.ref(null), mobl.ref("text"), mobl.ref(null), mobl.ref(ui.textFieldStyle), mobl.ref(ui.textFieldInvalidStyle), mobl.ref(false), mobl.ref(true), mobl.ref(true), mobl.ref(true), mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3289 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root3289); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes2919;
+      nodes2919 = node.contents();
+      oldNodes.replaceWith(nodes2919);
+    }));
+    callback(root3287); return subs__;
+    
+    
+    return subs__;
+  }, function(node) {
+    var oldNodes = nodes2917;
+    nodes2917 = node.contents();
+    oldNodes.replaceWith(nodes2917);
+  }));
+  var nodes2920 = $("<span>");
+  root3276.append(nodes2920);
+  subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
+    var root3290 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
-                     mobl.call('undercover.infoScreen', [gameNum, undercoverNum, mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp891 = result__;
+                     mobl.call('undercover.infoScreen', [gameNum, undercoverNum, normalString, ucString, mobl.ref(false), mobl.ref("slide")], function(result__) {
+                     var tmp918 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp883 = mobl.ref(result__);
+    var tmp910 = mobl.ref(result__);
     
-    var nodes2825 = $("<span>");
-    root3188.append(nodes2825);
-    subs__.addSub((ui.sideButton)(mobl.ref("确定"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp883, function(_, callback) {
-      var root3189 = $("<span>");
+    var nodes2921 = $("<span>");
+    root3290.append(nodes2921);
+    subs__.addSub((ui.sideButton)(mobl.ref("确定"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp910, function(_, callback) {
+      var root3291 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3189); return subs__;
+      callback(root3291); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2825;
-      nodes2825 = node.contents();
-      oldNodes.replaceWith(nodes2825);
+      var oldNodes = nodes2921;
+      nodes2921 = node.contents();
+      oldNodes.replaceWith(nodes2921);
     }));
-    callback(root3188); return subs__;
+    callback(root3290); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2824;
-    nodes2824 = node.contents();
-    oldNodes.replaceWith(nodes2824);
+    var oldNodes = nodes2920;
+    nodes2920 = node.contents();
+    oldNodes.replaceWith(nodes2920);
   }));
-  callback(root3180); return subs__;
+  callback(root3276); return subs__;
+  
+  
   
   
   
@@ -144,164 +226,164 @@ undercover.root = function(callback, screenCallback) {
   return subs__;
 };
 
-undercover.infoScreen = function(gameNum, undercoverNum, callback, screenCallback) {
-  var root3190 = $("<div>");
+undercover.infoScreen = function(gameNum, undercoverNum, normalString, ucString, callback, screenCallback) {
+  var root3292 = $("<div>");
   var subs__ = new mobl.CompSubscription();
   
   var game_status = mobl.ref("准备中");
   
   var game_status_desc = mobl.ref("查看自己的词语,每个只能显示一次！！！");
-  var nodes2826 = $("<span>");
-  root3190.append(nodes2826);
+  var nodes2922 = $("<span>");
+  root3292.append(nodes2922);
   subs__.addSub((ui.header)(mobl.ref("谁是卧底："), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root3191 = $("<span>");
+    var root3293 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root3191); return subs__;
+    callback(root3293); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2826;
-    nodes2826 = node.contents();
-    oldNodes.replaceWith(nodes2826);
+    var oldNodes = nodes2922;
+    nodes2922 = node.contents();
+    oldNodes.replaceWith(nodes2922);
   }));
-  var nodes2827 = $("<span>");
-  root3190.append(nodes2827);
+  var nodes2923 = $("<span>");
+  root3292.append(nodes2923);
   subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-    var root3192 = $("<span>");
+    var root3294 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = "目前游戏状态:	" + game_status.get();
-    var tmp884 = mobl.ref(result__);
+    var tmp911 = mobl.ref(result__);
     subs__.addSub(game_status.addEventListener('change', function() {
-      tmp884.set("目前游戏状态:	" + game_status.get());
+      tmp911.set("目前游戏状态:	" + game_status.get());
     }));
     
-    var nodes2828 = $("<span>");
-    root3192.append(nodes2828);
-    subs__.addSub((mobl.label)(tmp884, mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3193 = $("<span>");
+    var nodes2924 = $("<span>");
+    root3294.append(nodes2924);
+    subs__.addSub((mobl.label)(tmp911, mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3295 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3193); return subs__;
+      callback(root3295); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2828;
-      nodes2828 = node.contents();
-      oldNodes.replaceWith(nodes2828);
+      var oldNodes = nodes2924;
+      nodes2924 = node.contents();
+      oldNodes.replaceWith(nodes2924);
     }));
     
-    var node373 = $("<br>");
+    var node379 = $("<br>");
     
-    root3192.append(node373);
+    root3294.append(node379);
     var result__ = "说明:	" + game_status_desc.get();
-    var tmp885 = mobl.ref(result__);
+    var tmp912 = mobl.ref(result__);
     subs__.addSub(game_status_desc.addEventListener('change', function() {
-      tmp885.set("说明:	" + game_status_desc.get());
+      tmp912.set("说明:	" + game_status_desc.get());
     }));
     
-    var nodes2829 = $("<span>");
-    root3192.append(nodes2829);
-    subs__.addSub((mobl.label)(tmp885, mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3194 = $("<span>");
+    var nodes2925 = $("<span>");
+    root3294.append(nodes2925);
+    subs__.addSub((mobl.label)(tmp912, mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3296 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3194); return subs__;
+      callback(root3296); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2829;
-      nodes2829 = node.contents();
-      oldNodes.replaceWith(nodes2829);
+      var oldNodes = nodes2925;
+      nodes2925 = node.contents();
+      oldNodes.replaceWith(nodes2925);
     }));
-    callback(root3192); return subs__;
+    callback(root3294); return subs__;
     
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2827;
-    nodes2827 = node.contents();
-    oldNodes.replaceWith(nodes2827);
+    var oldNodes = nodes2923;
+    nodes2923 = node.contents();
+    oldNodes.replaceWith(nodes2923);
   }));
-  var nodes2830 = $("<span>");
-  root3190.append(nodes2830);
+  var nodes2926 = $("<span>");
+  root3292.append(nodes2926);
   subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-    var root3195 = $("<span>");
+    var root3297 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = "游戏人数：" + gameNum.get().toString() + " ";
-    var tmp886 = mobl.ref(result__);
+    var tmp913 = mobl.ref(result__);
     subs__.addSub(gameNum.addEventListener('change', function() {
-      tmp886.set("游戏人数：" + gameNum.get().toString() + " ");
+      tmp913.set("游戏人数：" + gameNum.get().toString() + " ");
     }));
     
-    var nodes2831 = $("<span>");
-    root3195.append(nodes2831);
-    subs__.addSub((mobl.label)(tmp886, mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3196 = $("<span>");
+    var nodes2927 = $("<span>");
+    root3297.append(nodes2927);
+    subs__.addSub((mobl.label)(tmp913, mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3298 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3196); return subs__;
+      callback(root3298); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2831;
-      nodes2831 = node.contents();
-      oldNodes.replaceWith(nodes2831);
+      var oldNodes = nodes2927;
+      nodes2927 = node.contents();
+      oldNodes.replaceWith(nodes2927);
     }));
     var result__ = "卧底人数：" + undercoverNum.get().toString();
-    var tmp887 = mobl.ref(result__);
+    var tmp914 = mobl.ref(result__);
     subs__.addSub(undercoverNum.addEventListener('change', function() {
-      tmp887.set("卧底人数：" + undercoverNum.get().toString());
+      tmp914.set("卧底人数：" + undercoverNum.get().toString());
     }));
     
-    var nodes2832 = $("<span>");
-    root3195.append(nodes2832);
-    subs__.addSub((mobl.label)(tmp887, mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root3197 = $("<span>");
+    var nodes2928 = $("<span>");
+    root3297.append(nodes2928);
+    subs__.addSub((mobl.label)(tmp914, mobl.ref(null), mobl.ref(null), function(_, callback) {
+      var root3299 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root3197); return subs__;
+      callback(root3299); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2832;
-      nodes2832 = node.contents();
-      oldNodes.replaceWith(nodes2832);
+      var oldNodes = nodes2928;
+      nodes2928 = node.contents();
+      oldNodes.replaceWith(nodes2928);
     }));
-    callback(root3195); return subs__;
+    callback(root3297); return subs__;
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2830;
-    nodes2830 = node.contents();
-    oldNodes.replaceWith(nodes2830);
+    var oldNodes = nodes2926;
+    nodes2926 = node.contents();
+    oldNodes.replaceWith(nodes2926);
   }));
   
-  var units = mobl.ref(undercover.getUnitList(gameNum.get(), undercoverNum.get()));
+  var units = mobl.ref(undercover.getUnitList(gameNum.get(), undercoverNum.get(), normalString.get(), ucString.get()));
   
   var i = mobl.ref(1);
-  var nodes2833 = $("<span>");
-  root3190.append(nodes2833);
+  var nodes2929 = $("<span>");
+  root3292.append(nodes2929);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root3198 = $("<span>");
+    var root3300 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
     var string1 = mobl.ref("身份,不可点");
     
     var isStart = mobl.ref(false);
     
-    var node374 = mobl.loadingSpan();
-    root3198.append(node374);
-    var list2247;
-    var listSubs177 = new mobl.CompSubscription();
-    subs__.addSub(listSubs177);
-    var renderList177 = function() {
-      var subs__ = listSubs177;
-      list2247 = units.get();
-      list2247.list(function(results309) {
-        node374.empty();
-        for(var i4751 = 0; i4751 < results309.length; i4751++) {
+    var node380 = mobl.loadingSpan();
+    root3300.append(node380);
+    var list2406;
+    var listSubs180 = new mobl.CompSubscription();
+    subs__.addSub(listSubs180);
+    var renderList180 = function() {
+      var subs__ = listSubs180;
+      list2406 = units.get();
+      list2406.list(function(results330) {
+        node380.empty();
+        for(var i4919 = 0; i4919 < results330.length; i4919++) {
           (function() {
-            var iternode177 = $("<span>");
-            node374.append(iternode177);
+            var iternode180 = $("<span>");
+            node380.append(iternode180);
             var unit;
-            unit = mobl.ref(mobl.ref(results309), i4751);
-            var nodes2834 = $("<span>");
-            iternode177.append(nodes2834);
+            unit = mobl.ref(mobl.ref(results330), i4919);
+            var nodes2930 = $("<span>");
+            iternode180.append(nodes2930);
             subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-              var root3199 = $("<span>");
+              var root3301 = $("<span>");
               var subs__ = new mobl.CompSubscription();
               
               var ss = mobl.ref("未知");
@@ -309,41 +391,41 @@ undercover.infoScreen = function(gameNum, undercoverNum, callback, screenCallbac
               var isShow = mobl.ref(false);
               
               var show = mobl.ref("显示");
-              var nodes2835 = $("<span>");
-              root3199.append(nodes2835);
+              var nodes2931 = $("<span>");
+              root3301.append(nodes2931);
               subs__.addSub((mobl.label)(mobl.ref(unit, 'id'), mobl.ref(null), mobl.ref(null), function(_, callback) {
-                var root3200 = $("<span>");
+                var root3302 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root3200); return subs__;
+                callback(root3302); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes2835;
-                nodes2835 = node.contents();
-                oldNodes.replaceWith(nodes2835);
+                var oldNodes = nodes2931;
+                nodes2931 = node.contents();
+                oldNodes.replaceWith(nodes2931);
               }));
-              var nodes2836 = $("<span>");
-              root3199.append(nodes2836);
+              var nodes2932 = $("<span>");
+              root3301.append(nodes2932);
               subs__.addSub((mobl.label)(mobl.ref(" : "), mobl.ref(null), mobl.ref(null), function(_, callback) {
-                var root3201 = $("<span>");
+                var root3303 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root3201); return subs__;
+                callback(root3303); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes2836;
-                nodes2836 = node.contents();
-                oldNodes.replaceWith(nodes2836);
+                var oldNodes = nodes2932;
+                nodes2932 = node.contents();
+                oldNodes.replaceWith(nodes2932);
               }));
-              var nodes2837 = $("<span>");
-              root3199.append(nodes2837);
+              var nodes2933 = $("<span>");
+              root3301.append(nodes2933);
               subs__.addSub((mobl.label)(ss, mobl.ref(null), mobl.ref(null), function(_, callback) {
-                var root3202 = $("<span>");
+                var root3304 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root3202); return subs__;
+                callback(root3304); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes2837;
-                nodes2837 = node.contents();
-                oldNodes.replaceWith(nodes2837);
+                var oldNodes = nodes2933;
+                nodes2933 = node.contents();
+                oldNodes.replaceWith(nodes2933);
               }));
               var result__ = function(event, callback) {
                                if(event && event.stopPropagation) event.stopPropagation();
@@ -361,19 +443,19 @@ undercover.infoScreen = function(gameNum, undercoverNum, callback, screenCallbac
                                  }
                                }
                              };
-              var tmp888 = mobl.ref(result__);
+              var tmp915 = mobl.ref(result__);
               
-              var nodes2838 = $("<span>");
-              root3199.append(nodes2838);
-              subs__.addSub((ui.sideButton)(show, mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp888, function(_, callback) {
-                var root3203 = $("<span>");
+              var nodes2934 = $("<span>");
+              root3301.append(nodes2934);
+              subs__.addSub((ui.sideButton)(show, mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp915, function(_, callback) {
+                var root3305 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root3203); return subs__;
+                callback(root3305); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes2838;
-                nodes2838 = node.contents();
-                oldNodes.replaceWith(nodes2838);
+                var oldNodes = nodes2934;
+                nodes2934 = node.contents();
+                oldNodes.replaceWith(nodes2934);
               }));
               var result__ = function(event, callback) {
                                if(event && event.stopPropagation) event.stopPropagation();
@@ -389,21 +471,21 @@ undercover.infoScreen = function(gameNum, undercoverNum, callback, screenCallbac
                                  }
                                }
                              };
-              var tmp889 = mobl.ref(result__);
+              var tmp916 = mobl.ref(result__);
               
-              var nodes2839 = $("<span>");
-              root3199.append(nodes2839);
-              subs__.addSub((ui.sideButton)(string1, mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp889, function(_, callback) {
-                var root3204 = $("<span>");
+              var nodes2935 = $("<span>");
+              root3301.append(nodes2935);
+              subs__.addSub((ui.sideButton)(string1, mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp916, function(_, callback) {
+                var root3306 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root3204); return subs__;
+                callback(root3306); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes2839;
-                nodes2839 = node.contents();
-                oldNodes.replaceWith(nodes2839);
+                var oldNodes = nodes2935;
+                nodes2935 = node.contents();
+                oldNodes.replaceWith(nodes2935);
               }));
-              callback(root3199); return subs__;
+              callback(root3301); return subs__;
               
               
               
@@ -411,45 +493,45 @@ undercover.infoScreen = function(gameNum, undercoverNum, callback, screenCallbac
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes2834;
-              nodes2834 = node.contents();
-              oldNodes.replaceWith(nodes2834);
+              var oldNodes = nodes2930;
+              nodes2930 = node.contents();
+              oldNodes.replaceWith(nodes2930);
             }));
             
-            var oldNodes = iternode177;
-            iternode177 = iternode177.contents();
-            oldNodes.replaceWith(iternode177);
+            var oldNodes = iternode180;
+            iternode180 = iternode180.contents();
+            oldNodes.replaceWith(iternode180);
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
-        subs__.addSub(list2247.addEventListener('change', function() { listSubs177.unsubscribe(); renderList177(true); }));
-        subs__.addSub(units.addEventListener('change', function() { listSubs177.unsubscribe(); renderList177(true); }));
+        subs__.addSub(list2406.addEventListener('change', function() { listSubs180.unsubscribe(); renderList180(true); }));
+        subs__.addSub(units.addEventListener('change', function() { listSubs180.unsubscribe(); renderList180(true); }));
       });
     };
-    renderList177();
+    renderList180();
     
-    var nodes2840 = $("<span>");
-    root3198.append(nodes2840);
+    var nodes2936 = $("<span>");
+    root3300.append(nodes2936);
     subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root3205 = $("<span>");
+      var root3307 = $("<span>");
       var subs__ = new mobl.CompSubscription();
       
       var btnString = mobl.ref("开始游戏");
       
       var labelString = mobl.ref("点击开始游戏后，才能显示身份！");
-      var nodes2841 = $("<span>");
-      root3205.append(nodes2841);
+      var nodes2937 = $("<span>");
+      root3307.append(nodes2937);
       subs__.addSub((mobl.label)(labelString, mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root3206 = $("<span>");
+        var root3308 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root3206); return subs__;
+        callback(root3308); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes2841;
-        nodes2841 = node.contents();
-        oldNodes.replaceWith(nodes2841);
+        var oldNodes = nodes2937;
+        nodes2937 = node.contents();
+        oldNodes.replaceWith(nodes2937);
       }));
       var result__ = function(event, callback) {
                        if(event && event.stopPropagation) event.stopPropagation();
@@ -467,39 +549,39 @@ undercover.infoScreen = function(gameNum, undercoverNum, callback, screenCallbac
                        labelString.set(result__);
                        if(callback && callback.apply) callback(); return;
                      };
-      var tmp890 = mobl.ref(result__);
+      var tmp917 = mobl.ref(result__);
       
-      var nodes2842 = $("<span>");
-      root3205.append(nodes2842);
-      subs__.addSub((ui.sideButton)(btnString, mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp890, function(_, callback) {
-        var root3207 = $("<span>");
+      var nodes2938 = $("<span>");
+      root3307.append(nodes2938);
+      subs__.addSub((ui.sideButton)(btnString, mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp917, function(_, callback) {
+        var root3309 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root3207); return subs__;
+        callback(root3309); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes2842;
-        nodes2842 = node.contents();
-        oldNodes.replaceWith(nodes2842);
+        var oldNodes = nodes2938;
+        nodes2938 = node.contents();
+        oldNodes.replaceWith(nodes2938);
       }));
-      callback(root3205); return subs__;
+      callback(root3307); return subs__;
       
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes2840;
-      nodes2840 = node.contents();
-      oldNodes.replaceWith(nodes2840);
+      var oldNodes = nodes2936;
+      nodes2936 = node.contents();
+      oldNodes.replaceWith(nodes2936);
     }));
-    callback(root3198); return subs__;
+    callback(root3300); return subs__;
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes2833;
-    nodes2833 = node.contents();
-    oldNodes.replaceWith(nodes2833);
+    var oldNodes = nodes2929;
+    nodes2929 = node.contents();
+    oldNodes.replaceWith(nodes2929);
   }));
-  callback(root3190); return subs__;
+  callback(root3292); return subs__;
   
   
   
@@ -519,11 +601,11 @@ undercover.getalist = function(gameNum, list) {
    var __this = this;
   var ids = [];
   
-  var coll608 = mobl.range(1, gameNum + 1);
-  var length360 = coll608.length;
-  for(var i4752 = 0; i4752 < length360; i4752++) {
+  var coll629 = mobl.range(1, gameNum + 1);
+  var length369 = coll629.length;
+  for(var i4920 = 0; i4920 < length369; i4920++) {
     var n;
-    n = coll608.get(i4752);
+    n = coll629.get(i4920);
     if(!list.contains(n)) {
       ids.push(n);
     } else {
@@ -533,23 +615,17 @@ undercover.getalist = function(gameNum, list) {
   return ids;
 };
 
-undercover.getUnitList = function(gameNum, ucNum) {
+undercover.getUnitList = function(gameNum, ucNum, normalString, ucString) {
    var __this = this;
   var rs = [];
   
-  var texts = ["中秋", "端午"];
-  
-  var normal_text = texts.get(0);
-  
-  var uc_text = texts.get(1);
-  
   var uc_ids = [];
   
-  var coll609 = mobl.range(0, ucNum);
-  var length361 = coll609.length;
-  for(var i4753 = 0; i4753 < length361; i4753++) {
+  var coll630 = mobl.range(0, ucNum);
+  var length370 = coll630.length;
+  for(var i4921 = 0; i4921 < length370; i4921++) {
     var n;
-    n = coll609.get(i4753);
+    n = coll630.get(i4921);
     var ids = undercover.getalist(gameNum, uc_ids);
     
     var rnum = mobl.random(ids.length - 1);
@@ -559,19 +635,19 @@ undercover.getUnitList = function(gameNum, ucNum) {
     uc_ids.push(unum);
   }
   mobl.log(uc_ids);
-  var coll610 = mobl.range(1, gameNum + 1);
-  var length362 = coll610.length;
-  for(var i4754 = 0; i4754 < length362; i4754++) {
+  var coll631 = mobl.range(1, gameNum + 1);
+  var length371 = coll631.length;
+  for(var i4922 = 0; i4922 < length371; i4922++) {
     var n;
-    n = coll610.get(i4754);
+    n = coll631.get(i4922);
     var item = [];
     
     item.id = n;
     if(uc_ids.contains(n)) {
-      item.text = uc_text;
+      item.text = ucString;
       item.isUnderCover = true;
     } else {
-      item.text = normal_text;
+      item.text = normalString;
       item.isUnderCover = false;
     }
     rs.push(item);
@@ -584,7 +660,7 @@ undercover.num_validate = function(n) {
   if(n > 0) {
     return "";
   } else {
-    return "请输入数字，不能为0";
+    return "请输入数字，不能为0!";
   }
 };
 
